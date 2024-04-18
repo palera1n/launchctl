@@ -68,12 +68,12 @@ XPC_EXPORT XPC_WARN_RESULT XPC_NONNULL1 XPC_NONNULL3 XPC_NONNULL4
 int
 _xpc_pipe_interface_routine(xpc_pipe_t pipe, uint64_t routine,
 	xpc_object_t message, xpc_object_t XPC_GIVES_REFERENCE *reply,
-	uint64_t flags) __API_AVAILABLE(ios(15.0));
+	uint64_t flags) __API_AVAILABLE(ios(15.0), tvos(15.0), watchos(8.0), bridgeos(6.0));
 
-int launch_active_user_switch(long, long) __API_AVAILABLE(ios(15.0));
+int launch_active_user_switch(long, long) __API_AVAILABLE(ios(15.0), tvos(15.0), watchos(8.0), bridgeos(6.0));
 
-int64_t xpc_user_sessions_enabled(void) __API_AVAILABLE(ios(16.0));
-uint64_t xpc_user_sessions_get_foreground_uid(uint64_t) __API_AVAILABLE(ios(16.0));
+int64_t xpc_user_sessions_enabled(void) __API_AVAILABLE(ios(16.0), tvos(16.0), watchos(9.0), bridgeos(7.0));
+uint64_t xpc_user_sessions_get_foreground_uid(uint64_t) __API_AVAILABLE(ios(16.0), tvos(16.0), watchos(9.0), bridgeos(7.0));
 
 XPC_EXPORT XPC_RETURNS_RETAINED XPC_WARN_RESULT XPC_NONNULL1
 xpc_object_t xpc_create_from_plist(const void * data, size_t length);
